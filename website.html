@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>KAUSA.ID - Custom Baju Futuristik</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #f5f5f5;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      text-align: center;
+      padding: 25px 0;
+      font-size: 28px;
+      font-weight: 600;
+      text-shadow: 0 0 10px #fff;
+    }
+
+    .welcome {
+      text-align: center;
+      padding: 100px 20px;
+      background: transparent;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .welcome h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 0 0 15px #00f0ff;
+    }
+
+    .welcome p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      color: #d3d3d3;
+    }
+
+    .welcome a {
+      background: linear-gradient(to right, #00f0ff, #7f5eff);
+      color: #000;
+      padding: 14px 30px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .welcome a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #7f5eff;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      animation: slideIn 1.2s ease-in-out;
+    }
+
+    .form-container label {
+      font-weight: 500;
+      margin-top: 15px;
+      display: block;
+      color: #e0e0e0;
+    }
+
+    .form-container input,
+    .form-container select,
+    .form-container textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .form-container input:focus,
+    .form-container select:focus,
+    .form-container textarea:focus {
+      box-shadow: 0 0 10px #00f0ff;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(to right, #00f0ff, #7f5eff);
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-container button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00f0ff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>KAUSA.ID</header>
+
+<section class="welcome">
+  <h1>Selamat Datang di KAUSA.ID</h1>
+  <p>Desain bajumu sendiri dan buat tampil beda dengan sentuhan futuristik!</p>
+  <a href="#formPemesanan">Mulai Pesan</a>
+</section>
+
+<div class="form-container" id="formPemesanan">
+  <form>
+    <label>Nama Lengkap:</label>
+    <input type="text" required>
+
+    <label>Email:</label>
+    <input type="email" required>
+
+    <label>Jenis Baju:</label>
+    <select>
+      <option>Kaos Polos</option>
+      <option>Kaos Lengan Panjang</option>
+      <option>Kaos Hoodie</option>
+    </select>
+
+    <label>Ukuran:</label>
+    <select>
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+
+    <label>Warna Baju:</label>
+    <input type="color">
+
+    <label>Upload Desain:</label>
+    <input type="file">
+
+    <label>Preview Desain:</label>
+    <div style="height: 150px; border: 2px dashed #7f5eff; border-radius: 12px; margin-bottom: 20px;"></div>
+
+    <label>Catatan Tambahan:</label>
+    <textarea rows="4"></textarea>
+
+    <button type="submit">Pesan Sekarang</button>
+  </form>
+</div>
+
+</body>
+</html>
